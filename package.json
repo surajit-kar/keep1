@@ -1,0 +1,10 @@
+{
+  "name": "keep-clone-notes",
+  "version": "1.0.0",
+  "description": "Google Keep style note taking app with attachment uploads",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test tests/api.test.js"
+  }
+}
