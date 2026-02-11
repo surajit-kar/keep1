@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Org Keep</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Org Keep</h1>
+    <input id="searchInput" type="search" placeholder="Search notes" />
+  </header>
+
+  <main>
+    <section class="create-note">
+      <input id="titleInput" placeholder="Title" />
+      <textarea id="contentInput" placeholder="Take a note..."></textarea>
+      <div class="actions-row">
+        <input id="labelsInput" placeholder="labels: team, project" />
+        <input id="fileInput" type="file" multiple />
+        <label>Color <input id="colorInput" type="color" value="#fff9c4" /></label>
+        <label><input id="pinInput" type="checkbox" /> Pin</label>
+        <button id="saveBtn">Save</button>
+      </div>
+    </section>
+
+    <section class="notes-area">
+      <h2>Pinned</h2>
+      <div id="pinnedGrid" class="notes-grid"></div>
+      <h2>Others</h2>
+      <div id="otherGrid" class="notes-grid"></div>
+    </section>
+  </main>
+
+  <template id="noteTemplate">
+    <article class="note-card">
+      <h3></h3>
+      <p class="content"></p>
+      <div class="labels"></div>
+      <div class="attachments"></div>
+      <div class="note-footer">
+        <button data-action="togglePin">Pin</button>
+        <button data-action="delete">Delete</button>
+      </div>
+    </article>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
